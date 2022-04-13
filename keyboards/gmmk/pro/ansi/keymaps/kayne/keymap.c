@@ -15,11 +15,11 @@
  */
 #include "seajaysec.h"
 
-const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
+// const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
 
-combo_t key_combos[COMBO_COUNT] = {
-    [JK_ESC] = COMBO(jk_combo, KC_ESC),
-};
+// combo_t key_combos[COMBO_COUNT] = {
+//     [JK_ESC] = COMBO(jk_combo, KC_ESC),
+// };
 
 const key_override_t delete_key_override = ko_make_basic(MOD_MASK_CTRL, KC_BSPACE, KC_DELETE);
 // This globally defines all key overrides to be used
@@ -59,14 +59,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  KC_BRID, KC_BRIU, KC_MISSION_CONTROL, KC_LAUNCHPAD, RGB_VAD, RGB_VAI, KC_MPRV, KC_MPLY,  KC_MNXT, KC_MUTE, KC__VOLDOWN, KC__VOLUP, _______,          KC_MPLY,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,          _______,
+          TT_FN, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,          _______,
         _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______,
         _______, KC_LALT, KC_LGUI,                            _______,                            KC_RGUI, KC_RALT, _______, _______, _______, _______
     ),
 
     [FUNCTIONS] = LAYOUT(
         _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12, KC_PSCR,          _______,
-        _______, KC_LINX, KC_MAC,  KC_WIN,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
+        _______, KC_LINX, KC_MAC,  KC_WIN,  _______, _______, _______, _______, _______, _______, _______, RGB_VAD, RGB_VAI, _______,          _______,
         _______, _______, KC_UP,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  KC_RST,          _______,
         KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, _______, _______, _______, _______, _______,          _______,          _______,
         _______,          KC_RGBH, KC_RGBS, KC_RGBV, KC_RGBE, KC_RGBP, KC_WRGB, _______, _______, _______, _______,          _______, RGB_MOD, _______,
